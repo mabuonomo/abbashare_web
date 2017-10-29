@@ -32,13 +32,16 @@ meteor --settings settings.json
 * Google Plus   https://goo.gl/Zn9f3g
 
 ## Technologies
-* MeteorJS (https://meteor.com)
-* NodeJS (https://nodejs.org)
-* MongoDB (https://www.mongodb.com)
-* AngularJS (https://angularjs.org/)
-* Angular Material (https://material.angularjs.org)
-* Socket.IO (https://socket.io/)
-* Docker (https://www.docker.com/)
-* Let's encrypt (https://letsencrypt.org/)
-* Sentry (https://sentry.io)
+* MeteorJS https://meteor.com
+* NodeJS https://nodejs.org
+* MongoDB https://www.mongodb.com
+* AngularJS https://angularjs.org/
+* Angular Material https://material.angularjs.org
+* Socket.IO https://socket.io/
+* Docker https://www.docker.com/
+* Let's encrypt https://letsencrypt.org/
+* Sentry https://sentry.io
 * and more, see full stack at: https://stackshare.io/mabuonomo/abbashare
+
+## Support us
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://goo.gl/HA5uc3)
