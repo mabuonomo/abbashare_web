@@ -21,7 +21,7 @@ Install nodejs dependencies:
 meteor npm install
 ```
 
-Create a settings.json in the root of the project
+Create a "settings.json" file in the root of the project:
 ```json
 {
     "public": {
@@ -42,6 +42,11 @@ Create a settings.json in the root of the project
 Run abbashare in development mode:
 ```bash
 meteor --settings settings.json
+```
+
+Open a browser at:
+```bash
+http://localhost:3000
 ```
 
 ## Follow us
