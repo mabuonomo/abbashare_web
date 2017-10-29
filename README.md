@@ -66,6 +66,5 @@ http://localhost:3000
 * Sentry https://sentry.io
 * and more, see full stack at: https://stackshare.io/mabuonomo/abbashare
 
-## Support us
-Coffee? No give me a beer!
+## Support us, coffee? No give me a beer!
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://goo.gl/HA5uc3)
