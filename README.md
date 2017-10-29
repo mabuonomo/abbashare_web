@@ -3,6 +3,23 @@ With #abbashare you can install ios ipa (adhoc/enterprise profile) via browser S
 
 Official Site: https://abbashare.com
 
+
+## Prerequisites
+
+On Windows, the installer can be found at https://www.meteor.com/install.
+
+On Linux/macOS, use this line:
+
+```bash
+curl https://install.meteor.com/ | sh
+```
+
+## Quick Start
+
+```bash
+meteor --settings settings.json
+```
+
 ### Technologies
 * MeteorJS (https://meteor.com)
 * NodeJS (https://nodejs.org)
