@@ -21,6 +21,24 @@ Install nodejs dependencies:
 meteor npm install
 ```
 
+Create a settings.json in the root of the project
+```json
+{
+    "public": {
+        "dropbox_api_id": "",
+        "sentry_public": ""
+    },
+    "private": {
+        "admin_email": "",
+        "sentry_private": "",
+        "email_user": "",
+        "email_pass": "",
+        "email_port": 0,
+        "email_smtp": ""
+    }
+}
+```
+
 Run abbashare in development mode:
 ```bash
 meteor --settings settings.json
