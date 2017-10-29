@@ -4,7 +4,7 @@ With #abbashare you can install ios ipa (adhoc/enterprise profile) via browser S
 Official Site: https://abbashare.com
 
 ### Technologies
-* MeteorJs (https://meteor.com)
+* MeteorJS (https://meteor.com)
 * NodeJS (https://nodejs.org)
 * MongoDB (https://www.mongodb.com)
 * AngularJS (https://angularjs.org/)
