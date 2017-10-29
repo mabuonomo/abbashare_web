@@ -16,10 +16,12 @@ curl https://install.meteor.com/ | sh
 
 ## Quick Start
 
+Install nodejs dependencies:
 ```bash
 meteor npm install
 ```
 
+Run abbashare in development mode:
 ```bash
 meteor --settings settings.json
 ```
