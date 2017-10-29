@@ -17,10 +17,14 @@ curl https://install.meteor.com/ | sh
 ## Quick Start
 
 ```bash
+meteor npm install
+```
+
+```bash
 meteor --settings settings.json
 ```
 
-### Technologies
+## Technologies
 * MeteorJS (https://meteor.com)
 * NodeJS (https://nodejs.org)
 * MongoDB (https://www.mongodb.com)
