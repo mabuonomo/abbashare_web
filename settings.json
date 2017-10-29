@@ -8,7 +8,7 @@
         "sentry_private": "",
         "email_user": "",
         "email_pass": "",
-        "email_port": 0,
+        "email_port": 01,
         "email_smtp": ""
     }
 }
