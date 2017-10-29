@@ -1,0 +1,50 @@
+body {
+    /* background-color: green; */
+    /* min-width: 1280px; */
+}
+
+.home_body {
+    min-width: 1280px;
+}
+
+md-toolbar {
+    position: fixed !important;
+    top: 0 !important;
+}
+
+md-content {
+    margin-top: 70px;
+    background-color: white;
+}
+
+.dropzone {
+    width: 200px;
+    height: 200px;
+    background: red;
+}
+
+.card_app_home {
+    height: 212px;
+    min-width: 320px;
+    width: 320px;
+}
+
+.card_number {
+    /* padding: 5px; */
+    margin-left: 5px;
+}
+
+.lf-ng-md-file-input{
+    text-align: center;
+}
+
+.white_start {
+    min-height: 400px;
+    height: 400px;
+    padding: 10px;
+    margin: 8px;
+}
+
+.start_button{
+    margin: 0px;
+}

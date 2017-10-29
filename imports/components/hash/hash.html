@@ -1,0 +1,91 @@
+<div layout="column" layout-fill class="home_body">
+
+    <md-content flex layout="column">
+
+        <div layout="row">
+
+            <amenu flex="20"></amenu>
+
+            <div layout="row" layout-align="center start" flex>
+                <div layout="column" flex class="box_hash">
+                    <md-whiteframe class="md-whiteframe-3dp box_white" layout="column" layout-align="center stretch" flex>
+                        <md-button md-no-ink class="md-primary">Hash encoder</md-button>
+                        <form ng-submit="$ctrl.doHash()" layout="column">
+                            <md-input-container>
+                                <label>String to hash</label>
+                                <textarea ng-model="$ctrl.text" md-maxlength="150" rows="3" md-select-on-focus></textarea>
+                            </md-input-container>
+                            <md-button md-no-ink class="md-raised md-primary" ng-click="$ctrl.doHash()" type="submit">Calculate</md-button>
+                        </form>
+                    </md-whiteframe>
+                </div>
+
+                <div layout="column" flex class="box_hash">
+                    <md-whiteframe class="md-whiteframe-3dp box_white" layout="column" layout-align="center stretch" flex>
+                        <md-button md-no-ink class="md-primary">hash decode</md-button>
+                        <form ng-submit="$ctrl.doSearch()" layout="column">
+                            <md-input-container>
+                                <label>Hash to string</label>
+                                <textarea ng-model="$ctrl.text_search" md-maxlength="150" rows="3" md-select-on-focus></textarea>
+                            </md-input-container>
+                            <md-button md-no-ink class="md-raised md-primary" ng-click="$ctrl.doSearch()" type="submit">Find</md-button>
+                        </form>
+                    </md-whiteframe>
+                </div>
+            </div>
+        </div>
+
+        <div layout="row" flex-offset="20" ng-if="$ctrl.found.text != undefined">
+            <md-whiteframe class="md-whiteframe-3dp box_white box_hash" layout="column" layout-align="start stretch" flex>
+                <md-button md-no-ink class="md-primary">{{$ctrl.found.text}}</md-button>
+                <md-button md-no-ink class="md-primary">{{$ctrl.text_search}}</md-button>
+            </md-whiteframe>
+        </div>
+
+        <div layout="row" flex-offset="20" ng-if="$ctrl.text != undefined">
+            <md-whiteframe class="md-whiteframe-3dp box_white box_hash" layout="column" layout-align="start stretch" flex>
+                <md-button md-no-ink class="md-primary">{{$ctrl.text}}</md-button>
+                <div layout="row">
+                    <md-button md-no-ink class="md-primary">sha1</md-button>
+                    <md-button md-no-ink class="md-primary">{{$ctrl.hash.sha1.hash}}</md-button>
+                </div>
+                <div layout="row">
+                    <md-button md-no-ink class="md-primary">md5</md-button>
+                    <md-button md-no-ink class="md-primary">{{$ctrl.hash.md5.hash}}</md-button>
+                </div>
+                <div layout="row">
+                    <md-button md-no-ink class="md-primary">sha256</md-button>
+                    <md-button md-no-ink class="md-primary">{{$ctrl.hash.sha256.hash}}</md-button>
+                </div>
+                <div layout="row">
+                    <md-button md-no-ink class="md-primary">sha512</md-button>
+                    <md-button md-no-ink class="md-primary">{{$ctrl.hash.sha512.hash}}</md-button>
+                </div>
+            </md-whiteframe>
+        </div>
+
+        <div layout="column" flex-offset="20">
+            <md-button md-no-ink class="md-primary">recent searches</md-button>
+            <md-whiteframe ng-repeat="hash in $ctrl.getHashs | limitTo : 5" class="md-whiteframe-3dp box_white box_hash" layout="column"
+                layout-align="center stretch" flex>
+                <md-button md-no-ink class="md-primary">{{hash.text}}</md-button>
+                <div layout="row">
+                    <md-button md-no-ink class="md-primary">sha1</md-button>
+                    <md-button md-no-ink class="md-primary">{{hash.hash.sha1.hash}}</md-button>
+                </div>
+                <div layout="row">
+                    <md-button md-no-ink class="md-primary">md5</md-button>
+                    <md-button md-no-ink class="md-primary">{{hash.hash.md5.hash}}</md-button>
+                </div>
+                <div layout="row">
+                    <md-button md-no-ink class="md-primary">sha256</md-button>
+                    <md-button md-no-ink class="md-primary">{{hash.hash.sha256.hash}}</md-button>
+                </div>
+                <div layout="row">
+                    <md-button md-no-ink class="md-primary">sha512</md-button>
+                    <md-button md-no-ink class="md-primary">{{hash.hash.sha512.hash}}</md-button>
+                </div>
+            </md-whiteframe>
+        </div>
+    </md-content>
+</div>

@@ -1,0 +1,130 @@
+<head>
+  <title>#abbashare | install ipa (adhoc/enterprise profile) via browser Safari on iOS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <base href="/">
+
+  <!-- social metatag -->
+  <meta property="og:url" content="https://abbashare.com" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="#abbashare | install ipa (adhoc/enterprise profile) via browser Safari on iOS" />
+  <meta property="og:description" content="With #abbashare you can install ios ipa via browser Safari on iOS, without TestFlight or iTunes"
+  />
+  <meta property="og:image" content="https://abbashare.com/assets/img/wallpaper/img4.jpg" />
+  <meta property="fb:app_id" content="603978516467780" />
+
+  <meta name="twitter:title" content="#abbashare | install ipa (adhoc/enterprise profile) via browser Safari on iOS">
+  <meta name="twitter:description" content="With #abbashare you can install ios ipa (adhoc/enterprise profile) via browser Safari on iOS, without TestFlight or iTunes">
+  <meta name="twitter:image" content="https://abbashare.com/assets/img/wallpaper/img4.jpg">
+  <meta name="twitter:url" content="https://abbashare.com">
+  <meta name="twitter:site" content="https://abbashare.com">
+
+  <!-- mete generic -->
+  <meta name="description" content="With #abbashare you can install ios ipa (adhoc/enterprise profile) via browser Safari on iOS, without TestFlight or iTunes">
+  <meta name="title" content="#abbashare | install ipa via browser Safari on iOS" />
+
+  <link rel="icon" sizes="16x16 32x32" href="/assets/img/hashtag.png">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.7/angular-material.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="/assets/css/lf-ng-md-file-input.min.css" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> -->
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Mukta" rel="stylesheet">
+
+  <!-- Add the slick-theme.css if you want default styling -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.css" />
+  <!-- Add the slick-theme.css if you want default styling -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.min.css" />
+
+  <!-- javascript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
+
+  <!-- Dropzone -->
+  <!-- <script src="https://rawgit.com/enyo/dropzone/d8ef7a82e6ab5447c1f2d9512c8e1bfd4de5ac9e/dist/dropzone.js"></script>
+  <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/d8ef7a82e6ab5447c1f2d9512c8e1bfd4de5ac9e/dist/dropzone.css">
+  <script>
+    Dropzone.autoDiscover = false;
+  </script> -->
+
+  <!-- google analytics -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-89777661-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <!-- 
+  <div id="fb-root"></div>
+  <script>(function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v2.10&appId=603978516467780';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script> -->
+
+</head>
+
+<body ng-app="abbashare" ng-strict-di="">
+
+  <cookie-law-banner policy-button="true" element=".header" message="We use cookies to help us improve, promote, and protect our services. By continuing to use the site, you agree to our cookie policy"
+    policy-url="/legals"></cookie-law-banner>
+
+  <div layout="column" layout-fill>
+
+
+    <header id="header"> </header>
+
+    <!-- BODY -->
+    <main flex layout="column" style="overflow-y : auto;">
+      <div ui-view="main" layout="column"></div>
+    </main>
+
+    <footer id="footer">
+      <div layout="column" layout-align="center center" style="padding:5px">
+        <div layout="row" layout-align="center center">
+          <a href="https://goo.gl/9E7QLF" target="_blank" alt="facebook">
+            <img class="social_ico" width="32" height="32" alt="facebook" title="facebook" src="/assets/img/facebook.jpg">
+          </a>
+          <a href="https://goo.gl/Zn9f3g" target="_blank" alt="google_plus">
+            <img class="social_ico" width="32" height="32" alt="google_plus" title="google plus" src="/assets/img/google.jpg">
+          </a>
+          <a href="https://goo.gl/yiKpQL" target="_blank" alt="linkedin">
+            <img class="social_ico" width="32" height="32" alt="linkedin" title="developer profile" src="/assets/img/linkedin.jpg">
+          </a>
+          <a href="https://youtu.be/EFmAtyMNIwY" target="_blank" alt="youtube">
+            <img class="social_ico" width="32" height="32" alt="youtube" title="tutorial on youtube" src="/assets/img/youtube.jpg">
+          </a>
+          <a href="https://goo.gl/P2a6aR" target="_blank" alt="twitter">
+            <img class="social_ico" width="32" height="32" alt="twitter" title="twitter" src="/assets/img/twitter.jpg">
+          </a>
+          <a href="mailto:infoabbashare@gmail.com" alt="email">
+            <img class="social_ico" width="32" height="32" alt="email" title="contact us" src="/assets/img/email.png">
+          </a>
+          <a href="https://goo.gl/HA5uc3" target="_blank" alt="paypal">
+            <img class="social_ico" width="32" height="32" alt="paypal" title="donate with paypal" src="/assets/img/paypal.jpg">
+          </a>
+        </div>
+
+        <div style="text-align:center; font-size:12px;" class="social_padding">© 2017 abbashare - All rights reserved. Made with ♥ in Naples (Italy). Thanks to pasta, pizza and maccaroni</div>
+      </div>
+    </footer>
+
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?tracking=1&top=1&thirdparty=1&privacyPage=https%3A%2F%2Fabbashare.com%2Flegals"></script> -->
+
+  </div>
+</body>

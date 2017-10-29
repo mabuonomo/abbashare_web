@@ -1,0 +1,47 @@
+<div layout="column" layout-fill>
+
+    <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">{{$ctrl.currentUser.profile.user_info.name.display_name}}</span>
+            </md-card-title-text>
+            <md-card-title-media>
+                <div class="md-media-sm card-media">
+                    <img ng-src="{{$ctrl.currentUser.profile.user_info.profile_photo_url}}">
+                </div>
+            </md-card-title-media>
+        </md-card-title>
+    </md-card>
+
+    <md-card>
+        <md-card-content layout="column" layout-align="center stretch">
+            <!-- <md-button class="md-raised" ng-href="/home" flex layout="row" layout-align="start center">
+                <i class="material-icons">&#xE80D;</i>
+                <span class="login_button_title">ipa tester</span>
+            </md-button>
+
+            <md-button class="md-raised" ng-href="/hash" flex layout="row" layout-align="start center">
+                <i class="material-icons">&#xE85D;</i>
+                <span class="login_button_title">hash calculator</span>
+            </md-button> -->
+
+            <md-button class="md-raised md-primary" ng-href="mailto:infoabbashare@gmail.com" flex layout="row" layout-align="start center">
+                <i class="material-icons">&#xE0D8;</i>
+                <span class="login_button_title">contact us</span>
+            </md-button>
+
+            <md-button class="md-raised md-warn" ng-click="logout()" flex layout="row" layout-align="start center">
+                <i class="material-icons">&#xE5CD;</i>
+                <span class="login_button_title">logout</span>
+            </md-button>
+
+        </md-card-content>
+
+        <div class="container" layout="column" layout-align="center center">
+            <a class="twitter-timeline" data-lang="it" data-width="90%" data-theme="light" href="https://twitter.com/abbashare">Tweets by #abbashare</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+
+    </md-card>
+
+</div>

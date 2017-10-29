@@ -1,0 +1,124 @@
+<div layout="column" layout-fill class="home_body">
+
+  <md-content flex layout="column">
+
+    <md-progress-linear ng-if="progress > 0" md-mode="determinate" value="{{progress}}"></md-progress-linear>
+
+    <div layout="row">
+
+      <amenu flex="20"></amenu>
+
+      <!-- <div > -->
+      <div flex="25" layout="column" layout-align="start center">
+        <div layout="row">
+          <i class="material-icons">flight_takeoff</i>
+          <span class="md-title">Start here, upload your .IPA</span>
+        </div>
+        <form name="testForm" layout="column">
+          <lf-ng-md-file-input name="fileArray" lf-files="fileArray" lf-api="api09" lf-required lf-maxcount="5" lf-filesize="140MB"
+            lf-totalsize="120MB" accept=".ipa" multiple drag></lf-ng-md-file-input>
+          <!-- {{testForm.fileArray}} -->
+          <!-- {{testForm.fileArray.$error}} -->
+          <div ng-messages="testForm.fileArray.$error" style="color:red;">
+            <!-- <div ng-message="required">This is required.</div> -->
+            <div ng-message="maxcount">Too much files.</div>
+            <div ng-message="filesize">File size too large.</div>
+            <div ng-message="totalsize">Total size too large.</div>
+            <div ng-message="mimetype">Mimetype error</div>
+          </div>
+          <md-button type="button" ng-if="testForm.$valid" class="md-raised md-primary start_button" ng-click="upload()">Upload</md-button>
+        </form>
+      </div>
+      <!-- </div> -->
+
+      <div layout="row" layout-wrap flex>
+        <md-card flex="20" class="card_app_home" ng-repeat="app in $ctrl.myApps">
+          <md-card-title>
+            <md-card-title-text>
+              <span class="md-headline">{{app.info.info[0].CFBundleName}}</span>
+              <span class="md-subhead">{{app.info.info[0].CFBundleIdentifier}}</span>
+              <span class="md-subhead">{{app.info.info[0].CFBundleShortVersionString}}</span>
+              <span class="md-subhead">{{app.info.info[0].CFBundleVersion}}</span>
+              <span class="md-subhead">{{app.info.uploadedAt * 1000 | date:'medium'}}</span>
+              <!-- <span class="md-headline">Test app</span>
+              <span class="md-subhead">com.app.test</span>
+              <span class="md-subhead">1.1</span>
+              <span class="md-subhead">10</span>
+              <span class="md-subhead">{{app.info.uploadedAt * 1000 | date:'medium'}}</span> -->
+            </md-card-title-text>
+            <md-card-title-media>
+              <div class="md-media-sm card-media">
+                <div layout="column">
+                  <div layout="row" layout-align="end center">
+                    <i class="material-icons">remove_red_eye</i>
+                    <span class="card_number">{{app.info.view}}</span>
+                  </div>
+                  <div layout="row" layout-align="end center">
+                    <i class="material-icons">cloud_download</i>
+                    <span class="card_number">{{app.info.download}}</span>
+                  </div>
+                </div>
+              </div>
+            </md-card-title-media>
+          </md-card-title>
+          <md-card-actions layout="row" layout-align="space-between center">
+
+            <div>
+              <i class="material-icons" tooltip="delete" ng-click="deleteApp(app)">delete</i>
+              <!-- <i class="material-icons" tooltip="share">share</i> -->
+
+              <md-menu>
+                <md-button aria-label="Open menu with custom trigger" class="md-icon-button" ng-mouseenter="$mdMenu.open()">
+                  <!-- <md-icon md-menu-origin md-svg-icon="call:textsms"></md-icon> -->
+                  <i class="material-icons" tooltip="share">share</i>
+                </md-button>
+                <md-menu-content width="4" ng-mouseleave="$mdMenu.close()">
+                  <md-menu-item>
+                    <md-button ng-click="share(app, 'facebook')">
+                      facebook
+                    </md-button>
+                  </md-menu-item>
+                  <md-menu-item>
+                    <md-button ng-click="share(app, 'skype')">
+                      skype
+                    </md-button>
+                  </md-menu-item>
+                  <md-menu-item>
+                    <md-button ng-click="share(app, 'twitter')">
+                      twitter
+                    </md-button>
+                  </md-menu-item>
+                  <md-menu-item>
+                    <md-button ng-click="share(app, 'telegram')">
+                      telegram
+                    </md-button>
+                  </md-menu-item>
+                  <md-menu-item>
+                    <md-button ng-click="share(app, 'email')">
+                      email
+                    </md-button>
+                  </md-menu-item>
+                  <md-menu-item>
+                    <md-button ng-click="share(app, 'google')">
+                      google
+                    </md-button>
+                  </md-menu-item>
+                </md-menu-content>
+              </md-menu>
+
+              <!-- <i class="mdi mdi-bell"></i>
+              <i class="mdi facebook-box"></i> -->
+            </div>
+            <!-- <div layout="row" layout-align="space-between center"> -->
+            <!-- <i class="material-icons">perm_device_information</i> -->
+            <!-- <i class="material-icons">delete</i> -->
+            <!-- </div> -->
+            <!-- <md-button class="md-raised md-warn" ng-disabled="app.info.uploaded != true">X</md-button> -->
+            <md-button class="md-raised md-primary" ng-disabled="app.info.uploaded != true" target="_blank" ng-href="/view/{{app.info.shortId}}">Show</md-button>
+            <!-- </div> -->
+          </md-card-actions>
+        </md-card>
+      </div>
+    </div>
+  </md-content>
+</div>

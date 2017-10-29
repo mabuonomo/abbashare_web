@@ -1,0 +1,102 @@
+.login_logo {
+    height: 41px;
+    width: 41px;
+}
+
+.login_title {
+    font-size: 30px !important;
+    margin-left: 10px !important;
+}
+
+.login_button {
+    width: 140px !important;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+}
+
+.login_wallpaper {
+    width: 100%;
+    height: 300px;
+    /* background-size: 100%; */
+    /* background-size: cover; */
+    object-fit: cover;
+}
+
+.login_wallpaper_footer {
+    width: 100%;
+    /* margin: 10px; */
+    /* margin-left: 15px;
+    margin-right: 15px; */
+    max-height: 200px;
+    /* height: 470px; */
+    /* background-size: 100%; */
+    /* background-size: cover; */
+    object-fit: cover;
+    padding: 3px;
+    /* //0px; */
+}
+
+.login_button_title {
+    margin-left: 5px;
+}
+
+.login_box_title {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.login_box_title_left {
+    margin-left: 50px;
+}
+
+.login_box_title_right {
+    margin-right: 50px;
+}
+
+.login_box_description {
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: justify;
+    width: 550px;
+}
+
+.login_box_sx {
+    padding: 10px;
+    margin-top: 10px;
+}
+
+md-toolbar {
+    position: fixed !important;
+    top: 0 !important;
+}
+
+md-content {
+    margin-top: 70px;
+    background-color: white;
+}
+
+.box_image {
+    width: 60%;
+}
+
+.login_box {
+    /* padding: 10px; */
+    margin: 10px;
+}
+
+.footer_beats {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+
+.box_description {
+    text-align: center;
+    padding: 10px;
+}
+
+.loading_spinner {
+    padding: 5px;
+}

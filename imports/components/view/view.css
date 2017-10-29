@@ -1,0 +1,36 @@
+.card_app {
+    /* height: 212px; */
+    min-width: 320px;
+    /* width: 280px; */
+}
+
+.card_number {
+    /* padding: 5px; */
+    margin-left: 5px;
+}
+
+.view_disclaimer {
+    min-height: 180px;
+    padding: 10px;
+    width: 320px;
+    height: 180px;
+}
+
+.adsbygoogle {
+    min-width: 90%;
+    min-height: 100px;
+}
+
+@media (min-width:500px) {
+    .adsbygoogle {
+        /* width: 468px; */
+        min-height: 60px;
+    }
+}
+
+@media (min-width:800px) {
+    .adsbygoogle {
+        /* width: 728px; */
+        min-height: 90px;
+    }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "angular-update-meta",
+  "version": "2.0.1",
+  "authors": [
+    {
+      "name": "Jurgen Van de Moere",
+      "email": "jurgen.van.de.moere@gmail.com"
+    }
+  ],
+  "keywords": [
+    "angular",
+    "angularjs",
+    "seo",
+    "prerender",
+    "prerender.io",
+    "meta",
+    "head"
+  ],
+  "main": ["dist/update-meta.js"],
+  "ignore": [
+    "src",
+    "test",
+    "gulpfile.js",
+    "karma-dist-concatenated.conf.js",
+    "karma-dist-minified.conf.js",
+    "**/.*"
+  ],
+  "dependencies": {
+    "angular": "^1.2.x"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.2.x",
+    "angular-scenario": "^1.2.x"
+  }
+}

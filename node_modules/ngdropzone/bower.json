@@ -1,0 +1,25 @@
+{
+  "name": "ng-dropzone",
+  "homepage": "https://github.com/thatisuday/ng-dropzone",
+  "authors": [
+    "Uday Hiwarale <uhiwarale@gmail.com>"
+  ],
+  "description": "AngularJS directive for Dropzone, an easy to use drag'n'drop file upload library. http://www.dropzonejs.com",
+  "main": "dist/ng-dropzone.js",
+  "keywords": [
+    "ngDropzone",
+    "dropzone"
+  ],
+  "license": "Apache 2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.7",
+    "dropzone": "^4.3.0"
+  }
+}

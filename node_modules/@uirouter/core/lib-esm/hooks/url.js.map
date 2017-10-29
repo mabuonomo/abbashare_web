@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "url.js",
+  "sourceRoot": "",
+  "sources": [
+    "@uirouter/core/hooks/url.ts"
+  ],
+  "names": [],
+  "mappings": "AAOA;;;;GAIG;AACH,IAAM,SAAS,GAAqB,UAAC,UAAsB;IACzD,IAAI,OAAO,GAAG,UAAU,CAAC,OAAO,EAAE,CAAC;IACnC,IAAI,MAAM,GAAiB,UAAU,CAAC,MAAM,CAAC,YAAY,CAAC;IAC1D,IAAI,UAAU,GAAc,UAAU,CAAC,MAAM,CAAC,SAAS,CAAC;IAExD,2CAA2C;IAC3C,wEAAwE;IACxE,uEAAuE;IACvE,+DAA+D;IAC/D,EAAE,CAAC,CAAC,OAAO,CAAC,MAAM,KAAK,KAAK,IAAI,OAAO,CAAC,QAAQ,IAAI,MAAM,CAAC,QAAQ,CAAC,SAAS,CAAC,CAAC,CAAC;QAC9E,IAAI,UAAU,GAAG,EAAC,OAAO,EAAE,OAAO,CAAC,QAAQ,KAAK,SAAS,EAAC,CAAC;QAC3D,UAAU,CAAC,IAAI,CAAC,MAAM,CAAC,QAAQ,CAAC,SAAS,CAAC,GAAG,EAAE,MAAM,CAAC,MAAM,EAAE,UAAU,CAAC,CAAC;IAC5E,CAAC;IAED,UAAU,CAAC,MAAM,CAAC,IAAI,CAAC,CAAC;AAC1B,CAAC,CAAC;AAEF,MAAM,CAAC,IAAM,iBAAiB,GAAG,UAAC,iBAAoC;IAClE,OAAA,iBAAiB,CAAC,SAAS,CAAC,EAAE,EAAE,SAAS,EAAE,EAAC,QAAQ,EAAE,IAAI,EAAC,CAAC;AAA5D,CAA4D,CAAC",
+  "sourcesContent": [
+    "/** @module hooks */ /** */\nimport {UrlRouter} from \"../url/urlRouter\";\nimport {StateService} from \"../state/stateService\";\nimport {Transition} from \"../transition/transition\";\nimport {TransitionHookFn} from \"../transition/interface\";\nimport {TransitionService} from \"../transition/transitionService\";\n\n/** \n * A [[TransitionHookFn]] which updates the URL after a successful transition\n * \n * Registered using `transitionService.onSuccess({}, updateUrl);`\n */\nconst updateUrl: TransitionHookFn = (transition: Transition) => {\n  let options = transition.options();\n  let $state: StateService = transition.router.stateService;\n  let $urlRouter: UrlRouter = transition.router.urlRouter;\n\n  // Dont update the url in these situations:\n  // The transition was triggered by a URL sync (options.source === 'url')\n  // The user doesn't want the url to update (options.location === false)\n  // The destination state, and all parents have no navigable url\n  if (options.source !== 'url' && options.location && $state.$current.navigable) {\n    var urlOptions = {replace: options.location === 'replace'};\n    $urlRouter.push($state.$current.navigable.url, $state.params, urlOptions);\n  }\n\n  $urlRouter.update(true);\n};\n\nexport const registerUpdateUrl = (transitionService: TransitionService) =>\n    transitionService.onSuccess({}, updateUrl, {priority: 9999});\n"
+  ]
+}

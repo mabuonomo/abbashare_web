@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "queue.js",
+  "sourceRoot": "",
+  "sources": [
+    "@uirouter/core/common/queue.ts"
+  ],
+  "names": [],
+  "mappings": "AAAA;;GAEG,CAAC,kBAAkB;AAEtB;IACE,eAAoB,MAAgB,EAAU,MAAqB;QAA/C,uBAAA,EAAA,WAAgB;QAAU,uBAAA,EAAA,aAAqB;QAA/C,WAAM,GAAN,MAAM,CAAU;QAAU,WAAM,GAAN,MAAM,CAAe;IAAI,CAAC;IAExE,uBAAO,GAAP,UAAQ,IAAO;QACb,IAAI,KAAK,GAAG,IAAI,CAAC,MAAM,CAAC;QACxB,KAAK,CAAC,IAAI,CAAC,IAAI,CAAC,CAAC;QACjB,EAAE,CAAC,CAAC,IAAI,CAAC,MAAM,IAAI,KAAK,CAAC,MAAM,GAAG,IAAI,CAAC,MAAM,CAAC;YAAC,KAAK,CAAC,KAAK,EAAE,CAAC;QAC7D,MAAM,CAAC,IAAI,CAAC;IACd,CAAC;IAED,uBAAO,GAAP;QACE,EAAE,CAAC,CAAC,IAAI,CAAC,IAAI,EAAE,CAAC;YACd,MAAM,CAAC,IAAI,CAAC,MAAM,CAAC,MAAM,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;IACvC,CAAC;IAED,qBAAK,GAAL;QACE,IAAI,OAAO,GAAG,IAAI,CAAC,MAAM,CAAC;QAC1B,IAAI,CAAC,MAAM,GAAG,EAAE,CAAC;QACjB,MAAM,CAAC,OAAO,CAAC;IACjB,CAAC;IAED,oBAAI,GAAJ;QACE,MAAM,CAAC,IAAI,CAAC,MAAM,CAAC,MAAM,CAAC;IAC5B,CAAC;IAED,sBAAM,GAAN,UAAO,IAAO;QACZ,IAAI,GAAG,GAAG,IAAI,CAAC,MAAM,CAAC,OAAO,CAAC,IAAI,CAAC,CAAC;QACpC,MAAM,CAAC,GAAG,GAAG,CAAC,CAAC,IAAI,IAAI,CAAC,MAAM,CAAC,MAAM,CAAC,GAAG,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;IACnD,CAAC;IAED,wBAAQ,GAAR;QACE,MAAM,CAAC,IAAI,CAAC,MAAM,CAAC,IAAI,CAAC,MAAM,CAAC,MAAM,GAAG,CAAC,CAAC,CAAC;IAC7C,CAAC;IAED,wBAAQ,GAAR;QACE,EAAE,CAAC,CAAC,IAAI,CAAC,IAAI,EAAE,CAAC;YACd,MAAM,CAAC,IAAI,CAAC,MAAM,CAAC,CAAC,CAAC,CAAC;IAC1B,CAAC;IACH,YAAC;AAAD,CAAC,AAtCD,IAsCC",
+  "sourcesContent": [
+    "/**\n * @module common\n */ /** for typedoc */\n\nexport class Queue<T> {\n  constructor(private _items: T[] = [], private _limit: number = null) { }\n\n  enqueue(item: T) {\n    let items = this._items;\n    items.push(item);\n    if (this._limit && items.length > this._limit) items.shift();\n    return item;\n  }\n\n  dequeue(): T {\n    if (this.size())\n      return this._items.splice(0, 1)[0];\n  }\n\n  clear(): Array<T> {\n    let current = this._items;\n    this._items = [];\n    return current;\n  }\n\n  size(): number {\n    return this._items.length;\n  }\n\n  remove(item: T) {\n    let idx = this._items.indexOf(item);\n    return idx > -1 && this._items.splice(idx, 1)[0];\n  }\n\n  peekTail(): T {\n    return this._items[this._items.length - 1];\n  }\n\n  peekHead(): T {\n    if (this.size())\n      return this._items[0];\n  }\n}\n"
+  ]
+}

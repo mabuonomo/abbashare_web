@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "plugins.js",
+  "sourceRoot": "",
+  "sources": [
+    "@uirouter/core/vanilla/plugins.ts"
+  ],
+  "names": [],
+  "mappings": ";;AAAA;;;GAGG;AACH,MAAM;AACN,iEAAgE;AAChE,6DAA4D;AAC5D,iCAAgD;AAGhD,uEAAsE;AACtE,iEAAgE;AAChE,+DAA8D;AAC9D,uCAAuC;AACvC,yBAAyB;AACzB,uDAAkD;AAElD,wBAA+B,MAAgB;IAC7C,uBAAQ,CAAC,SAAS,GAAG,oBAAS,CAAC;IAC/B,uBAAQ,CAAC,EAAE,GAAG,MAAE,CAAC;IAEjB,MAAM,CAAC,EAAE,IAAI,EAAE,kBAAkB,EAAE,EAAE,QAAA,EAAE,SAAS,sBAAA,EAAE,OAAO,EAAE,cAAM,OAAA,IAAI,EAAJ,CAAI,EAAE,CAAC;AAC1E,CAAC;AALD,wCAKC;AAED,+EAA+E;AAClE,QAAA,kBAAkB,GAC3B,6BAAqB,CAAC,0BAA0B,EAAE,KAAK,EAAE,yCAAmB,EAAE,6CAAqB,CAAC,CAAC;AAEzG,+GAA+G;AAClG,QAAA,uBAAuB,GAChC,6BAAqB,CAAC,2BAA2B,EAAE,IAAI,EAAE,mDAAwB,EAAE,6CAAqB,CAAC,CAAC;AAE9G,sFAAsF;AACzE,QAAA,oBAAoB,GAC7B,6BAAqB,CAAC,wBAAwB,EAAE,KAAK,EAAE,6CAAqB,EAAE,2CAAoB,CAAC,CAAC",
+  "sourcesContent": [
+    "/**\n * @internalapi\n * @module vanilla\n */\n/** */\nimport { BrowserLocationConfig } from \"./browserLocationConfig\";\nimport { HashLocationService } from \"./hashLocationService\";\nimport { locationPluginFactory } from \"./utils\";\nimport { LocationPlugin, ServicesPlugin } from \"./interface\";\nimport { UIRouter } from \"../router\";\nimport { PushStateLocationService } from \"./pushStateLocationService\";\nimport { MemoryLocationService } from \"./memoryLocationService\";\nimport { MemoryLocationConfig } from \"./memoryLocationConfig\";\nimport { $injector } from \"./injector\";\nimport { $q } from \"./q\";\nimport { services } from \"../common/coreservices\";\n\nexport function servicesPlugin(router: UIRouter): ServicesPlugin {\n  services.$injector = $injector;\n  services.$q = $q;\n\n  return { name: \"vanilla.services\", $q, $injector, dispose: () => null };\n}\n\n/** A `UIRouterPlugin` uses the browser hash to get/set the current location */\nexport const hashLocationPlugin: (router: UIRouter) => LocationPlugin =\n    locationPluginFactory('vanilla.hashBangLocation', false, HashLocationService, BrowserLocationConfig);\n\n/** A `UIRouterPlugin` that gets/sets the current location using the browser's `location` and `history` apis */\nexport const pushStateLocationPlugin: (router: UIRouter) => LocationPlugin =\n    locationPluginFactory(\"vanilla.pushStateLocation\", true, PushStateLocationService, BrowserLocationConfig);\n\n/** A `UIRouterPlugin` that gets/sets the current location from an in-memory object */\nexport const memoryLocationPlugin: (router: UIRouter) => LocationPlugin =\n    locationPluginFactory(\"vanilla.memoryLocation\", false, MemoryLocationService, MemoryLocationConfig);\n"
+  ]
+}

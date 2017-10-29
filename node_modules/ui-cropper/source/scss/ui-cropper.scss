@@ -1,0 +1,45 @@
+ui-cropper {
+    width: 100%;
+    &.fixed-height {
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        canvas {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+    }
+    &.full-width {
+        text-align:center;
+        canvas {
+            display:inline;
+        }
+    }
+
+    display: block;
+    canvas {
+        // Disable Outline
+        outline: none;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        /* mobile webkit */
+    }
+    .loading {
+        .fixed-height {
+            height: 100%;
+            position: absolute;
+        }
+        width: 100%;
+        font-size: 16px;
+        font-weight: bold;
+        display: flex;
+        display: -webkit-flex;
+        align-items: center;
+        -webkit-align-items: center;
+        justify-content: center;
+        -webkit-justify-content: center;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.75);
+    }
+}

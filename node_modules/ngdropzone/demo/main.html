@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html ng-app="myNgApp">
+	<head>
+		<meta charset="utf-8">
+		<title>ng-dropzone simple example</title>
+		
+		<!-- AngularJS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+		
+		<!-- Dropzone -->
+		<script src="https://rawgit.com/enyo/dropzone/d8ef7a82e6ab5447c1f2d9512c8e1bfd4de5ac9e/dist/dropzone.js"></script>
+		<link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/d8ef7a82e6ab5447c1f2d9512c8e1bfd4de5ac9e/dist/dropzone.css">
+		
+		<!-- ng-dropzone -->
+		<script src="../dist/ng-dropzone.min.js"></script>
+		
+		<!-- Misc -->
+		<link rel="stylesheet" href="../dist/ng-dropzone.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+		
+		<style>
+			body{
+				font-family:'Roboto', sans-serif !important;
+			}
+			.dropzone{
+				width:700px;
+				min-height:250px;
+				margin: 10px auto;
+			}
+			#dropzone3{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 style="text-align:center; margin-bottom:0px; color:#000;">ng-dropzone</h1>
+		<p style="text-align:center; color:#666; font-weight:300;">
+			Angularjs directive for Dropzone, an easy to use drag'n'drop file upload library.
+		</p>
+		
+
+		<!-- ####################################################### -->
+		<!-- #####################   DROPZONES  #################### -->
+		<!-- ####################################################### -->
+		
+		<!-- Dropzone 1 -->
+		<div ng-controller="drop1Controller">
+			<div id="dropzone1" class="dropzone" options="dzOptions" callbacks="dzCallbacks" ng-dropzone></div>
+		</div>
+		
+		<br/><br/>
+		
+		<!-- Dropzone 2 -->
+		<div ng-controller="drop2Controller">
+			<div style="text-align:center;" id="startUpload" ng-show="showBtns">
+				<button ng-click="dzMethods.processQueue();">Start Uploading</button>
+				<button ng-click="dzMethods.removeAllFiles();">Remove All Files</button>
+				<button ng-click="dzMethods.removeFile(lastFile);">Remove Last File</button>
+				<button ng-click="getDropzone();">Get getDropzone instance</button>
+				<button ng-click="getFiles();">Get total files</button>
+			</div>
+			<div id="dropzone2" class="dropzone sm" options="dzOptions" methods="dzMethods" callbacks="dzCallbacks" ng-dropzone></div>
+		</div>
+		
+		<br/><br/>
+		
+		<!-- Dropzone 3 -->
+		<h4 style="text-align:center;">Dropzone for button as a trigger</h4>
+		<div ng-controller="drop3Controller" style="text-align:center;">
+			<button id="buttonDropzone" style="position:relative;">Upload Profile Pic</button>
+			<div id="dropzone3" class="dropzone" options="dzOptions" callbacks="dzCallbacks" ng-dropzone></div>
+			<p><small>Chech source code to know how to set up. You need to set display:none on dropzone.</small></p>
+		</div>
+
+
+		<!-- ####################################################### -->
+		<!-- #######################  FOOTER  ###################### -->
+		<!-- ####################################################### -->
+		
+		<br/><hr/><br/>
+		
+		<p style="text-align:center; font-size:12px; color:#999;">
+			I have used ng-dropzone.css for clean dropzone UI in these examples.
+		</p>
+		
+		<style>.gitBtns iframe:not(:last-child){margin-right:15px;}</style>
+		<div class="gitBtns" style="margin:10px auto; text-align:center;">
+			<a class="github-button" href="https://github.com/thatisuday" data-count-href="/thatisuday/followers" data-count-api="/users/thatisuday#followers" data-count-aria-label="# followers on GitHub" aria-label="Follow @thatisuday on GitHub">Follow @thatisuday</a>
+			
+			<a class="github-button" href="https://github.com/thatisuday/ng-dropzone" data-icon="octicon-star" data-count-href="/thatisuday/ng-dropzone/stargazers" data-count-api="/repos/thatisuday/ng-dropzone#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star thatisuday/ng-dropzone on GitHub">Star</a>
+			
+			<a class="github-button" href="https://github.com/thatisuday/ng-dropzone/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download thatisuday/ng-dropzone on GitHub">Download</a>
+		</div>
+
+		<p style="text-align:center; font-size:16px;">
+			<svg aria-hidden="true" class="octicon octicon-mark-github" height="28" version="1.1" viewBox="0 0 16 16" width="28"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59 0.4 0.07 0.55-0.17 0.55-0.38 0-0.19-0.01-0.82-0.01-1.49-2.01 0.37-2.53-0.49-2.69-0.94-0.09-0.23-0.48-0.94-0.82-1.13-0.28-0.15-0.68-0.52-0.01-0.53 0.63-0.01 1.08 0.58 1.23 0.82 0.72 1.21 1.87 0.87 2.33 0.66 0.07-0.52 0.28-0.87 0.51-1.07-1.78-0.2-3.64-0.89-3.64-3.95 0-0.87 0.31-1.59 0.82-2.15-0.08-0.2-0.36-1.02 0.08-2.12 0 0 0.67-0.21 2.2 0.82 0.64-0.18 1.32-0.27 2-0.27 0.68 0 1.36 0.09 2 0.27 1.53-1.04 2.2-0.82 2.2-0.82 0.44 1.1 0.16 1.92 0.08 2.12 0.51 0.56 0.82 1.27 0.82 2.15 0 3.07-1.87 3.75-3.65 3.95 0.29 0.25 0.54 0.73 0.54 1.48 0 1.07-0.01 1.93-0.01 2.2 0 0.21 0.15 0.46 0.55 0.38C13.71 14.53 16 11.53 16 8 16 3.58 12.42 0 8 0z"></path></svg>
+			
+			<br/>
+			
+			<a style="color:#000!important; text-decoration:none; font-weight:700; text-transform:uppercase;" href="https://github.com/thatisuday/ng-dropzone">Go Back to GitHub</a>
+		</p>
+		
+		<br/><br/>
+		
+		
+		<!-- ####################################################### -->
+		<!-- #####################  JAVASCRIPT  #################### -->
+		<!-- ####################################################### -->
+		<script>
+		Dropzone.autoDiscover = false;
+		var myNgApp = angular.module('myNgApp', ['thatisuday.dropzone']);
+		
+		myNgApp.config(function(dropzoneOpsProvider){
+			dropzoneOpsProvider.setOptions({
+				url : '/upload_1.php',
+				acceptedFiles : 'image/jpeg, images/jpg, image/png',
+				addRemoveLinks : true,
+				dictDefaultMessage : 'Click to add or drop photos',
+				dictRemoveFile : 'Remove photo',
+				dictResponseError : 'Could not upload this photo'
+			});
+		});
+		
+		// Dropzone 1
+		myNgApp.controller('drop1Controller', function($scope, $timeout){
+			$scope.dzOptions = {
+				paramName : 'photo',
+				maxFilesize : '10'
+			};
+			
+			$scope.dzCallbacks = {
+				'addedfile' : function(file){
+					console.info('File added from dropzone 1.', file);
+				}
+			};
+		});
+		
+		
+		// Dropzone 2
+		myNgApp.controller('drop2Controller', function($scope, $timeout){
+			$scope.showBtns = false;
+			$scope.lastFile = null;
+			$scope.getDropzone = function(){
+				console.log($scope.dzMethods.getDropzone());
+				alert('Check console log.');
+			};
+			$scope.getFiles = function(){
+				console.log($scope.dzMethods.getAllFiles());
+				alert('Check console log.');
+			};
+			
+			$scope.dzOptions = {
+				url : '/upload_2.php',
+				dictDefaultMessage : 'Add files to show dropzone methods (few)',
+				acceptedFiles : 'image/jpeg',
+				parallelUploads : 5,
+				autoProcessQueue : false
+			};
+			
+			$scope.dzMethods = {};
+			
+			$scope.dzCallbacks = {
+				'addedfile' : function(file){
+					$scope.showBtns = true;
+					$scope.lastFile = file;
+				},
+				'error' : function(file, xhr){
+					console.warn('File failed to upload from dropzone 2.', file, xhr);
+				}
+			};
+		});
+		
+		
+		
+		
+		// Dropzone 3 (button dropzone)
+		myNgApp.controller('drop3Controller', function($scope, $timeout){
+			$scope.dzOptions = {
+				previewsContainer : false,
+				clickable : '#buttonDropzone', 
+				autoProcessQueue : false
+			};
+			
+			$scope.dzCallbacks = {
+				'addedfile' : function(file){
+					console.info('File added from dropzone 1.', file);
+				}
+			};
+		});
+		</script>
+
+
+		<!-- ####################################################### -->
+		<!-- ######################  ASYNC JS  ##################### -->
+		<!-- ####################################################### -->
+		<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+	</body>
+</html>
+
