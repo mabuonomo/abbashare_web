@@ -26,6 +26,11 @@ Run abbashare in development mode:
 meteor --settings settings.json
 ```
 
+## Follow us
+* Facebook      https://goo.gl/9E7QLF
+* Twitter       https://goo.gl/P2a6aR
+* Google Plus   https://goo.gl/Zn9f3g
+
 ## Technologies
 * MeteorJS (https://meteor.com)
 * NodeJS (https://nodejs.org)
