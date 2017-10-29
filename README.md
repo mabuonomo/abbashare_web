@@ -26,10 +26,10 @@ Create a "settings.json" file in the root of the project:
 {
     "public": {
         "dropbox_api_id": "",
-        "sentry_public": ""
+        "sentry_public": "",
+        "admin_email": ""
     },
     "private": {
-        "admin_email": "",
         "sentry_private": "",
         "email_user": "",
         "email_pass": "",

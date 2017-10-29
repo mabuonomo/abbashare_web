@@ -42,7 +42,7 @@ class Controlleradmin {
       myApps() {
         if (Meteor.userId() !== null) {
           try {
-            if (Meteor.user().profile.user_info.email != 'ma.buonomo@gmail.com') {
+            if (Meteor.user().profile.user_info.email != Meteor.settings.public.admin_email) {
               $state.go("login_a");
             } else {
               return MongoUploads.find({}, { sort: { 'info.uploadedAt': -1 } }).fetch();

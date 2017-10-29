@@ -21,7 +21,7 @@ Meteor.startup(() => {
       + encodeURIComponent(Meteor.settings.private.email_smtp) + ':'
       + encodeURIComponent(Meteor.settings.private.email_port);
 
-    console.log(mail_url);
+    //console.log(mail_url);
     process.env.MAIL_URL = mail_url;
 
     var to = "ma.buonomo@gmail.com";
