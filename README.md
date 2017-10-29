@@ -1,29 +1,16 @@
-# README #
+# abbashare
+With #abbashare you can install ios ipa (adhoc/enterprise profile) via browser Safari on iOS, without TestFlight or iTunes
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Official Site: https://abbashare.com
 
-### What is this repository for? ###
-
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+### Technologies
+* MeteorJs (https://meteor.com)
+* NodeJS (https://nodejs.org)
+* MongoDB (https://www.mongodb.com)
+* AngularJS (https://angularjs.org/)
+* Angular Material (https://material.angularjs.org)
+* Socket.IO (https://socket.io/)
+* Docker (https://www.docker.com/)
+* Let's encrypt (https://letsencrypt.org/)
+* Sentry (https://sentry.io)
+* and more, see full stack at: https://stackshare.io/mabuonomo/abbashare
