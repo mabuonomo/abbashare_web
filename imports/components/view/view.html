@@ -83,8 +83,9 @@
               </md-menu-content>
             </md-menu>
           </div>
-          <md-button class="md-raised md-primary" ng-if="showLink" ng-click="updateDownload()" ng-href="{{$ctrl.getApp.info.temporaryLinkPlist.result.itunes_link}}">Install</md-button>
-          <md-button class="md-raised md-primary" ng-disabled="true" ng-if="!showLink">Processing</md-button>
+          <md-button class="md-raised md-primary" ng-if="showLink && ios()" ng-click="updateDownload()" ng-href="{{$ctrl.getApp.info.temporaryLinkPlist.result.itunes_link}}">Install</md-button>
+          <md-button class="md-raised md-primary" ng-disabled="true" ng-if="!showLink && ios()">Processing</md-button>
+          <md-button class="md-raised md-primary" ng-disabled="true" ng-if="!ios()">Use safari</md-button>          
         </md-card-actions>
       </md-card>
 

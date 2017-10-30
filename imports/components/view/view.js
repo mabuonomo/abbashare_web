@@ -71,6 +71,27 @@ class Controllerview {
       });
     }
 
+    $scope.ios = function () {
+
+      var iDevices = [
+        'iPad Simulator',
+        'iPhone Simulator',
+        'iPod Simulator',
+        'iPad',
+        'iPhone',
+        'iPod'
+      ];
+
+      if (!!navigator.platform) {
+        while (iDevices.length) {
+          if (navigator.platform === iDevices.pop()) { return true; }
+        }
+      }
+
+      return false;
+
+    }
+
     $scope.share = function (app, provider) {
       Socialshare.share({
         'provider': provider,//'facebook',
