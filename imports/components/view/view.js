@@ -106,17 +106,23 @@ class Controllerview {
     $scope.getTemporaryLink();
 
     // getTemporaryLink();
+    var saved = false;;
     $scope.updateDownload = function () {
-      Meteor.call('updateDownload', {
-        shortId: shortId
-      }, (err, res) => {
-        if (err) {
-          // alert(err);
-        } else {
-          // success!
-          // console.log(res);
-        }
-      });
+
+      if (!saved) {
+        saved = true;
+        
+        Meteor.call('updateDownload', {
+          shortId: shortId
+        }, (err, res) => {
+          if (err) {
+            // alert(err);
+          } else {
+            // success!
+            // console.log(res);
+          }
+        });
+      }
     }
 
   }
