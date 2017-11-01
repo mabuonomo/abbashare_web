@@ -29,6 +29,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.7/angular-material.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="/assets/css/lf-ng-md-file-input.min.css" rel="stylesheet">
+  <link href="/assets/css/jquery.cookiebar.css" rel="stylesheet">
+
   <!-- <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> -->
 
   <!-- fonts -->
@@ -42,6 +44,23 @@
   <!-- javascript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
+
+  <script type="text/javascript" src="/assets/js/jquery.cookiebar.js"></script>
+  <script type="text/javascript"> 
+    $(document).ready(function () {
+      $.cookieBar({
+        fixed: true,
+        bottom: true,
+        zindex: '9999',
+        message: 'We use cookies to help us improve, promote, and protect our services. By continuing to use the site, you agree to our cookie policy',
+        policyText: 'Privacy Policy',
+        policyURL: '/legals',
+        policyButton: true,
+        acceptOnScroll: 50,
+        acceptAnyClick: true
+      });
+    });
+  </script>
 
   <!-- Dropzone -->
   <!-- <script src="https://rawgit.com/enyo/dropzone/d8ef7a82e6ab5447c1f2d9512c8e1bfd4de5ac9e/dist/dropzone.js"></script>
@@ -81,10 +100,10 @@
 
 <body ng-app="abbashare" ng-strict-di="">
 
-  <!--
-  <cookie-law-banner policy-button="true" element=".header" message="We use cookies to help us improve, promote, and protect our services. By continuing to use the site, you agree to our cookie policy"
-    policy-url="/legals"></cookie-law-banner>
-  -->
+
+  <!-- <cookie-law-banner policy-button="true" element=".header" message="We use cookies to help us improve, promote, and protect our services. By continuing to use the site, you agree to our cookie policy"
+    policy-url="/legals"></cookie-law-banner> -->
+
 
   <div layout="column" layout-fill>
 
@@ -108,7 +127,7 @@
           <a href="https://goo.gl/meYN5K" target="_blank" alt="github">
             <img class="social_ico" width="32" height="32" alt="github" title="github profile" src="/assets/img/github.png">
           </a>
-         <!--  <a href="https://goo.gl/yiKpQL" target="_blank" alt="linkedin">
+          <!--  <a href="https://goo.gl/yiKpQL" target="_blank" alt="linkedin">
             <img class="social_ico" width="32" height="32" alt="linkedin" title="developer profile" src="/assets/img/linkedin.jpg">
           </a> -->
           <a href="https://youtu.be/EFmAtyMNIwY" target="_blank" alt="youtube">
@@ -129,7 +148,7 @@
       </div>
     </footer>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?tracking=1&top=1&thirdparty=1&privacyPage=https%3A%2F%2Fabbashare.com%2Flegals"></script> 
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?tracking=1&top=1&thirdparty=1&privacyPage=https%3A%2F%2Fabbashare.com%2Flegals"></script>  -->
 
   </div>
 </body>
