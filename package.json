@@ -19,7 +19,6 @@
     "angular-socialshare": "^2.3.11",
     "angular-update-meta": "^2.0.1",
     "babel-runtime": "^6.26.0",
-    "bcrypt": "^1.0.3",
     "browserify": "^14.4.0",
     "bufferutil": "^3.0.2",
     "cookie-bar": "^1.5.28",
