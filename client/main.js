@@ -7,7 +7,7 @@ import ngMdIcons from 'angular-material-icons';
 import ngAnimate from 'angular-animate';
 import loadingBar from 'angular-loading-bar';
 // import config from '../imports/startup/router.js';
-import firebase from  'firebase';
+import firebase from 'firebase';
 
 //my modules
 // import home from '../imports/components/home/home';
@@ -30,49 +30,49 @@ import '../node_modules/mdi/css/materialdesignicons.min.css';
 
 
 Meteor.startup(() => {
-  // console.log("Meteor startup client")
-  navigator.serviceWorker.register('/sw.js').then().catch(error => console.log('ServiceWorker registration failed: ', err));
+    // console.log("Meteor startup client")
+    // navigator.serviceWorker.register('/sw.js').then().catch(error => console.log('ServiceWorker registration failed: ', error));
 });
 
 // var CLIENT_DROPBOX_ID = 'hinixw7xesh412x';
 // var CLIENT_DROPBOX_SECRET = '';
 
 var app = angular.module('abbashare', [
-  angularMeteor,
-  // todosList.name,
-  'accounts.ui',
-  // home.name,
-  uiRouter,
-  ngMaterial,
-  ngAnimate,
+    angularMeteor,
+    // todosList.name,
+    'accounts.ui',
+    // home.name,
+    uiRouter,
+    ngMaterial,
+    ngAnimate,
 
-  //module
-  login.name,
-  home.name,
-  view.name,
-  legals.name,
-  header.name,
-  admin.name,
-  amenu.name,
-  hash.name,
-  //other
-  ngMdIcons,
-  loadingBar,
-  'angular-cookie-law'
-  // 'CookieComponent'
-  //veterinario
-  // vethome.name,
-  // vetamenu.name,
-  // vetheader.name,
-  // vetsearch.name,
+    //module
+    login.name,
+    home.name,
+    view.name,
+    legals.name,
+    header.name,
+    admin.name,
+    amenu.name,
+    hash.name,
+    //other
+    ngMdIcons,
+    loadingBar,
+    'angular-cookie-law'
+    // 'CookieComponent'
+    //veterinario
+    // vethome.name,
+    // vetamenu.name,
+    // vetheader.name,
+    // vetsearch.name,
 
-  // //cliente
-  // clhome.name,
-  // clamenu.name,
-  // clheader.name,
+    // //cliente
+    // clhome.name,
+    // clamenu.name,
+    // clheader.name,
 
-  //dialog
-  // dialogambulatory
+    //dialog
+    // dialogambulatory
 ]).config(("config", config)).run(("run", run));
 
 // app.directive('userAvatar', function () {
@@ -82,53 +82,53 @@ var app = angular.module('abbashare', [
 //   };
 // });
 
-app.directive("filesInput", function () {
-  return {
-    require: "ngModel",
-    link: function postLink(scope, elem, attrs, ngModel) {
-      elem.on("change", function (e) {
-        var files = elem[0].files;
-        ngModel.$setViewValue(files);
-        // console.log(files);
-      })
+app.directive("filesInput", function() {
+    return {
+        require: "ngModel",
+        link: function postLink(scope, elem, attrs, ngModel) {
+            elem.on("change", function(e) {
+                var files = elem[0].files;
+                ngModel.$setViewValue(files);
+                // console.log(files);
+            })
+        }
     }
-  }
 });
 
-app.config(['$compileProvider', function ($compileProvider) {
-  $compileProvider.aHrefSanitizationWhitelist(/^\s*(itms-services|https?|file|tel|mailto):/);
+app.config(['$compileProvider', function($compileProvider) {
+    $compileProvider.aHrefSanitizationWhitelist(/^\s*(itms-services|https?|file|tel|mailto):/);
 }]);
 
 config.$inject = ['$locationProvider', '$urlRouterProvider', '$qProvider'];
 
 //routing
 function config($locationProvider, $urlRouterProvider, $qProvider) {
-  'ngInject';
+    'ngInject';
 
-  $locationProvider.html5Mode(true);
-  $urlRouterProvider.otherwise('/login');
-  $qProvider.errorOnUnhandledRejections(false);
+    $locationProvider.html5Mode(true);
+    $urlRouterProvider.otherwise('/login');
+    $qProvider.errorOnUnhandledRejections(false);
 }
 
 run.$inject = ['$rootScope', '$state', '$transitions'];
 
 function run($rootScope, $state, $transitions) {
-  'ngInject';
+    'ngInject';
 
-  $transitions.onError({}, function (transition) {
-    console.log('error', transition.error().message, transition);
-    switch (transition.error().detail) {
-      case 'AUTH_REQUIRED':
-        console.log("redirect to login");
-        $state.go('login_a');
-        break;
+    $transitions.onError({}, function(transition) {
+        console.log('error', transition.error().message, transition);
+        switch (transition.error().detail) {
+            case 'AUTH_REQUIRED':
+                console.log("redirect to login");
+                $state.go('login_a');
+                break;
 
-      case 'WRONG_ROLE':
-        $state.go('login_a');
-        break;
+            case 'WRONG_ROLE':
+                $state.go('login_a');
+                break;
 
-      // default:
-      //   $state.go("login_a");
-    }
-  });
+                // default:
+                //   $state.go("login_a");
+        }
+    });
 }
