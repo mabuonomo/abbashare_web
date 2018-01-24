@@ -16,21 +16,51 @@
     height: 180px;
 }
 
-.adsbygoogle {
+
+/* .adsbygoogle {
     min-width: 90%;
     min-height: 100px;
 }
 
 @media (min-width:500px) {
     .adsbygoogle {
-        /* width: 468px; */
         min-height: 60px;
     }
 }
 
 @media (min-width:800px) {
     .adsbygoogle {
-        /* width: 728px; */
         min-height: 90px;
     }
+} */
+
+
+/* ins {
+    min-width: 300px;
+    min-height: 50px;
 }
+
+.adsbygoogle {
+    min-width: 300px;
+    min-height: 100px;
+} */
+
+
+/* .adBlock {
+    width: 300px;
+    height: 100px;
+}
+
+@media (min-width:500px) {
+    .adBlock {
+        width: 468px;
+        height: 60px;
+    }
+}
+
+@media (min-width:800px) {
+    .adBlock {
+        width: 728px;
+        height: 90px;
+    }
+} */
