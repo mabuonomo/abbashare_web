@@ -116,57 +116,59 @@
 
 </head>
 
-<body ng-app="abbashare" ng-strict-di="">
+<body ng-app="abbashare" ng-strict-di="" layout="column" layout-fill>
 
 
     <!-- <cookie-law-banner policy-button="true" element=".header" message="We use cookies to help us improve, promote, and protect our services. By continuing to use the site, you agree to our cookie policy"
     policy-url="/legals"></cookie-law-banner> -->
 
 
-    <div layout="column" layout-fill>
+    <!-- <div layout="column" layout-fill> -->
 
 
-        <header id="header"> </header>
+    <header id="header"> </header>
 
-        <!-- BODY -->
-        <!-- <main flex layout="column"> -->
-        <div ui-view="main" layout="column"></div>
-        <!-- </main> -->
+    <!-- BODY -->
+    <!-- <main class='md-padding' layout="row" flex> -->
+    <!-- <div flex> -->
+    <div ui-view="main" layout="column"></div>
+    <!-- </div> -->
+    <!-- </main> -->
 
-        <footer id="footer">
-            <div layout="column" layout-align="center center" style="padding:5px">
-                <div layout="row" layout-align="center center">
-                    <a href="https://goo.gl/9E7QLF" target="_blank" alt="facebook">
-                        <img class="social_ico" width="32" height="32" alt="facebook" title="facebook" src="/assets/img/facebook.jpg">
-                    </a>
-                    <a href="https://goo.gl/Zn9f3g" target="_blank" alt="google_plus">
-                        <img class="social_ico" width="32" height="32" alt="google_plus" title="google plus" src="/assets/img/google.jpg">
-                    </a>
-                    <a href="https://goo.gl/meYN5K" target="_blank" alt="github">
-                        <img class="social_ico" width="32" height="32" alt="github" title="github profile" src="/assets/img/github.png">
-                    </a>
-                    <!--  <a href="https://goo.gl/yiKpQL" target="_blank" alt="linkedin">
+    <footer id="footer">
+        <div flex layout="column" layout-align="center center" style="padding:5px;">
+            <div layout="row" layout-align="center center">
+                <a href="https://goo.gl/9E7QLF" target="_blank" alt="facebook">
+                    <img class="social_ico" width="32" height="32" alt="facebook" title="facebook" src="/assets/img/facebook.jpg">
+                </a>
+                <a href="https://goo.gl/Zn9f3g" target="_blank" alt="google_plus">
+                    <img class="social_ico" width="32" height="32" alt="google_plus" title="google plus" src="/assets/img/google.jpg">
+                </a>
+                <a href="https://goo.gl/meYN5K" target="_blank" alt="github">
+                    <img class="social_ico" width="32" height="32" alt="github" title="github profile" src="/assets/img/github.png">
+                </a>
+                <!--  <a href="https://goo.gl/yiKpQL" target="_blank" alt="linkedin">
             <img class="social_ico" width="32" height="32" alt="linkedin" title="developer profile" src="/assets/img/linkedin.jpg">
           </a> -->
-                    <a href="https://youtu.be/EFmAtyMNIwY" target="_blank" alt="youtube">
-                        <img class="social_ico" width="32" height="32" alt="youtube" title="tutorial on youtube" src="/assets/img/youtube.jpg">
-                    </a>
-                    <a href="https://goo.gl/P2a6aR" target="_blank" alt="twitter">
-                        <img class="social_ico" width="32" height="32" alt="twitter" title="twitter" src="/assets/img/twitter.jpg">
-                    </a>
-                    <a href="mailto:infoabbashare@gmail.com" alt="email">
-                        <img class="social_ico" width="32" height="32" alt="email" title="contact us" src="/assets/img/email.png">
-                    </a>
-                    <a href="https://goo.gl/HA5uc3" target="_blank" alt="paypal">
-                        <img class="social_ico" width="32" height="32" alt="paypal" title="donate with paypal" src="/assets/img/paypal.jpg">
-                    </a>
-                </div>
-
-                <div style="text-align:center; font-size:12px;" class="social_padding">© 2017 abbashare - All rights reserved. Made with ♥ in Naples (Italy). Thanks to pasta, pizza and maccaroni</div>
+                <a href="https://youtu.be/EFmAtyMNIwY" target="_blank" alt="youtube">
+                    <img class="social_ico" width="32" height="32" alt="youtube" title="tutorial on youtube" src="/assets/img/youtube.jpg">
+                </a>
+                <a href="https://goo.gl/P2a6aR" target="_blank" alt="twitter">
+                    <img class="social_ico" width="32" height="32" alt="twitter" title="twitter" src="/assets/img/twitter.jpg">
+                </a>
+                <a href="mailto:infoabbashare@gmail.com" alt="email">
+                    <img class="social_ico" width="32" height="32" alt="email" title="contact us" src="/assets/img/email.png">
+                </a>
+                <a href="https://goo.gl/HA5uc3" target="_blank" alt="paypal">
+                    <img class="social_ico" width="32" height="32" alt="paypal" title="donate with paypal" src="/assets/img/paypal.jpg">
+                </a>
             </div>
-        </footer>
 
-        <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?tracking=1&top=1&thirdparty=1&privacyPage=https%3A%2F%2Fabbashare.com%2Flegals"></script>  -->
+            <div style="text-align:center; font-size:12px;" class="social_padding">© 2017 abbashare - All rights reserved. Made with ♥ in Italy. Thanks to pasta, pizza and maccaroni</div>
+        </div>
+    </footer>
 
-    </div>
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?tracking=1&top=1&thirdparty=1&privacyPage=https%3A%2F%2Fabbashare.com%2Flegals"></script>  -->
+
+    <!-- </div> -->
 </body>

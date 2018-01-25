@@ -18,6 +18,24 @@
             <md-card class="card_appa">
                 <md-card-title>
                     <md-card-title-text>
+                        <span class="md-headline">Owner</span>
+                        <span class="md-subhead">{{owner.profile.user_info.name.display_name}}</span>
+                        <span class="md-subhead">{{owner.profile.user_info.email}}</span>
+                        <!-- <span class="md-subhead">Owner file</span>
+        <span class="md-subhead">owner@test.io</span> -->
+                    </md-card-title-text>
+                    <md-card-title-media>
+                        <div class="md-media-sm card-media">
+                            <img ng-src="{{owner.profile.user_info.profile_photo_url}}">
+                            <!-- <img src="https://maxcdn.icons8.com/Share/icon/p1em/Very_Basic//share1600.png"> -->
+                        </div>
+                    </md-card-title-media>
+                </md-card-title>
+            </md-card>
+
+            <md-card class="card_appa">
+                <md-card-title>
+                    <md-card-title-text>
                         <span class="md-headline">{{$ctrl.getApp.info.info[0].CFBundleName}}</span>
                         <span class="md-subhead">{{$ctrl.getApp.info.info[0].CFBundleIdentifier}}</span>
                         <span class="md-subhead">{{$ctrl.getApp.info.info[0].CFBundleShortVersionString}}</span>
@@ -91,24 +109,22 @@
                         <md-button class="md-raised md-primary" ng-disabled="true" ng-if="!showLink && ios()">Processing</md-button>
                         <md-button class="md-raised md-primary" ng-disabled="true" ng-if="!ios()">Use safari</md-button>
                     </div>
-                    <div layout="row" layout-align="center center">
-                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <div layout="row" layout-align="center stretch">
+                        <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                         <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-fe+6a+31-k2+pr" data-ad-client="ca-pub-3399063052461927" data-ad-slot="9014458121"></ins>
                         <script>
                             // setTimeout(function() {
 
                             (adsbygoogle = window.adsbygoogle || []).push({});
                             // }, 1000);
-                        </script>
-                        <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
-                        <!-- <ins class="adsbygoogle adBlock" style="display:inline-block;" data-ad-client="ca-pub-3399063052461927" data-ad-slot="1868924568"></ins> -->
-                        <!-- <ins class="adsbygoogle adBlock" style="display:inline-block;" data-ad-client="ca-pub-3399063052461927" data-ad-slot="1868924568" data-ad-format="auto"></ins> -->
-                        <!--  -->
-                        <!-- <script>
-                            $(document).ready(function() {
-                                (adsbygoogle = window.adsbygoogle || []).push({});
-                            });
                         </script> -->
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <ins class="adsbygoogle" style="display:inline-block;" data-ad-client="ca-pub-3399063052461927" data-ad-slot="1868924568" data-ad-format="auto"></ins>
+                        <script>
+                            // $(document).ready(function() {
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                            // });
+                        </script>
                     </div>
                 </md-card-actions>
             </md-card>
@@ -116,23 +132,7 @@
             <!-- adsense -->
 
 
-            <md-card class="card_appa">
-                <md-card-title>
-                    <md-card-title-text>
-                        <span class="md-headline">Owner</span>
-                        <span class="md-subhead">{{owner.profile.user_info.name.display_name}}</span>
-                        <span class="md-subhead">{{owner.profile.user_info.email}}</span>
-                        <!-- <span class="md-subhead">Owner file</span>
-                <span class="md-subhead">owner@test.io</span> -->
-                    </md-card-title-text>
-                    <md-card-title-media>
-                        <div class="md-media-sm card-media">
-                            <img ng-src="{{owner.profile.user_info.profile_photo_url}}">
-                            <!-- <img src="https://maxcdn.icons8.com/Share/icon/p1em/Very_Basic//share1600.png"> -->
-                        </div>
-                    </md-card-title-media>
-                </md-card-title>
-            </md-card>
+
             <!-- </div>
 
         <div flex layout="row" layout-align="center center" style="height: 200px;"> -->
