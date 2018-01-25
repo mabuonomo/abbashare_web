@@ -116,7 +116,7 @@
 
 </head>
 
-<body ng-app="abbashare" ng-strict-di="" layout="column" layout-fill>
+<body ng-app="abbashare" ng-strict-di="" layout="column">
 
 
     <!-- <cookie-law-banner policy-button="true" element=".header" message="We use cookies to help us improve, promote, and protect our services. By continuing to use the site, you agree to our cookie policy"
@@ -129,12 +129,13 @@
     <header id="header"> </header>
 
     <!-- BODY -->
-    <!-- <main class='md-padding' layout="row" flex> -->
-    <!-- <div flex> -->
-    <div ui-view="main" layout="column"></div>
-    <!-- </div> -->
-    <!-- </main> -->
+    <main flex style="overflow-y: auto;">
+        <!-- <div flex> -->
+        <div ui-view="main"></div>
+        <!-- </div> -->
+    </main>
 
+    <!-- http://plnkr.co/edit/GQjcrqhwB2T5ohZwC5EL?p=preview -->
     <footer id="footer">
         <div flex layout="column" layout-align="center center" style="padding:5px;">
             <div layout="row" layout-align="center center">
@@ -147,9 +148,6 @@
                 <a href="https://goo.gl/meYN5K" target="_blank" alt="github">
                     <img class="social_ico" width="32" height="32" alt="github" title="github profile" src="/assets/img/github.png">
                 </a>
-                <!--  <a href="https://goo.gl/yiKpQL" target="_blank" alt="linkedin">
-            <img class="social_ico" width="32" height="32" alt="linkedin" title="developer profile" src="/assets/img/linkedin.jpg">
-          </a> -->
                 <a href="https://youtu.be/EFmAtyMNIwY" target="_blank" alt="youtube">
                     <img class="social_ico" width="32" height="32" alt="youtube" title="tutorial on youtube" src="/assets/img/youtube.jpg">
                 </a>

@@ -1,53 +1,52 @@
 <md-toolbar class="md-hue-2 md-toolbar-tools" layout="column">
-  <div layout="row" layout-fill>
+    <div layout="row" layout-fill>
 
-    <div layout="row" flex="30" flex-xs="70" layout-align="start center">
-      <md-button ng-href="/">
-        <h1 class="login_title" hide-xs>#abbashare</h1>
-        <h1 class="login_title" hide-gt-xs>#abba</h1>
-      </md-button>
-    </div>
+        <div layout="row" flex="30" flex-xs="70" layout-align="start center">
+            <md-button ng-href="/">
+                <h1 class="login_title" hide-xs>#abbashare</h1>
+                <h1 class="login_title" hide-gt-xs>#abba</h1>
+            </md-button>
+        </div>
 
-    <div layout="row" flex="70" flex-xs="30" layout-align="end center">
+        <div layout="row" flex="70" flex-xs="30" layout-align="end center">
 
-      <md-button ng-href="https://goo.gl/HA5uc3" target="_blank" layout="row" class="md-raised md-primary login_button" layout-align="start center">
-        <i class="material-icons">&#xE8A1;</i>
-        <span class="login_button_title">Donate</span>
-      </md-button>
+            <md-button ng-href="https://goo.gl/HA5uc3" target="_blank" layout="row" class="md-raised md-primary login_button" layout-align="start center">
+                <i class="material-icons">&#xE8A1;</i>
+                <span class="login_button_title">Donate</span>
+            </md-button>
 
-      <md-button ng-href="/legals" target="_blank" layout="row" class="md-raised md-primary login_button" layout-align="start center">
-        <i class="material-icons">&#xE8EE;</i>
-        <span class="login_button_title">Legals</span>
-      </md-button>
+            <md-button ng-href="/legals" target="_blank" layout="row" class="md-raised md-primary login_button" layout-align="start center">
+                <i class="material-icons">&#xE8EE;</i>
+                <span class="login_button_title">Legals</span>
+            </md-button>
 
-      <!-- <md-button ng-href="https://www.youtube.com/watch?v=EFmAtyMNIwY" hide-xs  target="_blank" layout="row" class="md-raised md-primary login_button"
+            <!-- <md-button ng-href="https://www.youtube.com/watch?v=EFmAtyMNIwY" hide-xs  target="_blank" layout="row" class="md-raised md-primary login_button"
         layout-align="start center">
         <i class="material-icons">&#xE055;</i>
         <span class="login_button_title">Youtube</span>
       </md-button> -->
 
-      <!-- <div layout="row" flex="30" layout-align="end center"> -->
-      <md-button ng-if="$ctrl.currentUser == undefined" ng-href="{{authUrl}}" hide-xs class="md-raised login_button"
-        layout="row" layout-align="start center">
-        <!-- <img class="login_logo" src="/assets/img/generic/ico_dropbox.png "> -->
-        <!-- <i class="material-icons">&#xE0DA;</i> -->
-        <img src="/assets/img/dropbox-32.png">
-        <span class="login_button_title">login</span>
-      </md-button>
+            <!-- <div layout="row" flex="30" layout-align="end center"> -->
+            <md-button ng-if="$ctrl.currentUser == undefined" ng-href="{{authUrl}}" hide-xs class="md-raised login_button" layout="row" layout-align="start center">
+                <!-- <img class="login_logo" src="/assets/img/generic/ico_dropbox.png "> -->
+                <!-- <i class="material-icons">&#xE0DA;</i> -->
+                <img src="/assets/img/dropbox-32.png">
+                <span class="login_button_title">login</span>
+            </md-button>
 
-      <!-- <md-button ng-if="$ctrl.currentUser != undefined" ng-click="logout()" hide-xs class="md-raised md-primary login_button" layout="row"
+            <!-- <md-button ng-if="$ctrl.currentUser != undefined" ng-click="logout()" hide-xs class="md-raised md-primary login_button" layout="row"
         layout-align="start center">
         <i class="material-icons">&#xE5CD;</i>
         <span class="login_button_title">Logout</span>
       </md-button> -->
 
+        </div>
+
+
     </div>
 
-
-  </div>
-
-  <!-- nel responsive i bottoni vanno sulla seconda row -->
-  <!-- <div layout="row" hide-gt-xs layout-fill layout-align="space-between start">
+    <!-- nel responsive i bottoni vanno sulla seconda row -->
+    <!-- <div layout="row" hide-gt-xs layout-fill layout-align="space-between start">
 
     <md-button ng-href="https://paypal.me/sharksoft" target="_blank" layout="row" class="md-raised md-primary header_button_bottom" layout-align="start center">
       <i class="material-icons">&#xE8A1;</i>
