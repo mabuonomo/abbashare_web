@@ -17,22 +17,26 @@
 }
 
 
-/* .adsbygoogle {
+.adsbygoogle {
     min-width: 90%;
-    min-height: 100px;
+    /* min-height: 100px; */
+    min-height: 150px;
 }
 
 @media (min-width:500px) {
     .adsbygoogle {
-        min-height: 60px;
+        /* min-height: 60px; */
+        min-height: 100px;
+
     }
 }
 
 @media (min-width:800px) {
     .adsbygoogle {
-        min-height: 90px;
+        /* min-height: 90px; */
+        min-height: 150px;
     }
-} */
+}
 
 
 /* ins {

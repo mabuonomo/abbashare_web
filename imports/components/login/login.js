@@ -58,46 +58,50 @@ class ControllerLogin {
 
     if (Meteor.userId() != null) {
       // window.location.href = "/home";
+      console.log("user logged, redirect to home");
       $state.go("home");
-    }
+    } else {
 
-    // $location.url().replace("#","?");
-    // console.log($stateParams);
-    // console.log($location.search()['access_token']);
-    // console.log($location.hash());
+      // $location.url().replace("#","?");
+      // console.log($stateParams);
+      // console.log($location.search()['access_token']);
+      // console.log($location.hash());
 
-    if ($location.hash() != undefined && $location.hash() != '') {
-      // console.log("redirect to " + "/login?" + $location.hash());
-      window.location.href = "/login?" + $location.hash();
-    }
+      if ($location.hash() != undefined && $location.hash() != '') {
+        // console.log("redirect to " + "/login?" + $location.hash());
+        window.location.href = "/login?" + $location.hash();
+      }
 
-    //utente appena loggato
-    $scope.access_token = $stateParams.access_token;
-    if ($stateParams.access_token != undefined && $stateParams.access_token != '') {
+      //utente appena loggato
+      $scope.access_token = $stateParams.access_token;
+      if ($stateParams.access_token != undefined && $stateParams.access_token != '') {
 
-      $scope.loading = true;
+        $scope.loading = true;
 
-      Meteor.call('login_dropbox', {
-        access_token: $stateParams.access_token,
-        account_id: $stateParams.account_id
-      }, (err, res) => {
-        if (err) {
-          alert(err);
-        } else {
-          // success!
-          // console.log(res);
-        }
-      });
+        Meteor.call('login_dropbox', {
+          access_token: $stateParams.access_token,
+          account_id: $stateParams.account_id
+        }, (err, res) => {
+          if (err) {
+            alert(err);
+          } else {
+            // success!
+            // console.log(res);
+          }
+        });
+      }
 
     }
 
     $scope.login = function (username, password) {
+      console.log("login");
       Meteor.loginWithPassword(username, password, function (error) {
         if (error) {
           // controller.showAlert('Credenziali errate');
           // console.log(error);
         } else {
           // window.location.href = "/home";
+          console.log("login called, redirect to home");
           $state.go("home");
         }
       })
@@ -149,15 +153,16 @@ function config($stateProvider, $qProvider, $locationProvider) {
       "main": {
         template: '<login></login>'
       }
-    }, resolve: {
-      currentUser: ["$state", function ($state) {
-        if (Meteor.userId() === null) {
-          // return $q.reject('AUTH_REQUIRED');
-        } else {
-          // return $state.go('home');
-        }
-      }]
     }
+    // , resolve: {
+    //   currentUser: ["$state", function ($state) {
+    //     if (Meteor.userId() === null) {
+    //       // return $q.reject('AUTH_REQUIRED');
+    //     } else {
+    //       // return $state.go('home');
+    //     }
+    //   }]
+    // }
     // ,
     // resolve: {
     //   url: function ($location) {

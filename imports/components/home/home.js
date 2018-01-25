@@ -269,13 +269,13 @@ function config($stateProvider, $qProvider) {
       }
     },
     resolve: {
-      currentUser: ["$q", function ($q) {
+      currentUser($q) {
         if (Meteor.userId() === null) {
-          return $q.reject('AUTH_REQUIRED');
+          return $q.reject();
         } else {
           return $q.resolve();
         }
-      }],
+      },
     },
     // onEnter: ['$state', function ($state) {
     //   if (Meteor.userId() === null)
