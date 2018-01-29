@@ -18,24 +18,6 @@
             <md-card class="card_appa">
                 <md-card-title>
                     <md-card-title-text>
-                        <span class="md-headline">Owner</span>
-                        <span class="md-subhead">{{owner.profile.user_info.name.display_name}}</span>
-                        <span class="md-subhead">{{owner.profile.user_info.email}}</span>
-                        <!-- <span class="md-subhead">Owner file</span>
-        <span class="md-subhead">owner@test.io</span> -->
-                    </md-card-title-text>
-                    <md-card-title-media>
-                        <div class="md-media-sm card-media">
-                            <img ng-src="{{owner.profile.user_info.profile_photo_url}}">
-                            <!-- <img src="https://maxcdn.icons8.com/Share/icon/p1em/Very_Basic//share1600.png"> -->
-                        </div>
-                    </md-card-title-media>
-                </md-card-title>
-            </md-card>
-
-            <md-card class="card_appa">
-                <md-card-title>
-                    <md-card-title-text>
                         <span class="md-headline">{{$ctrl.getApp.info.info[0].CFBundleName}}</span>
                         <span class="md-subhead">{{$ctrl.getApp.info.info[0].CFBundleIdentifier}}</span>
                         <span class="md-subhead">{{$ctrl.getApp.info.info[0].CFBundleShortVersionString}}</span>
@@ -128,7 +110,23 @@
             </md-card>
 
             <!-- adsense -->
-
+            <md-card class="card_appa">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">Owner</span>
+                        <span class="md-subhead">{{owner.profile.user_info.name.display_name}}</span>
+                        <span class="md-subhead">{{owner.profile.user_info.email}}</span>
+                        <!-- <span class="md-subhead">Owner file</span>
+        <span class="md-subhead">owner@test.io</span> -->
+                    </md-card-title-text>
+                    <md-card-title-media>
+                        <div class="md-media-sm card-media">
+                            <img ng-src="{{owner.profile.user_info.profile_photo_url}}">
+                            <!-- <img src="https://maxcdn.icons8.com/Share/icon/p1em/Very_Basic//share1600.png"> -->
+                        </div>
+                    </md-card-title-media>
+                </md-card-title>
+            </md-card>
 
 
             <!-- </div>
