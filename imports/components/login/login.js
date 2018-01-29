@@ -30,18 +30,18 @@ class ControllerLogin {
 
         this.helpers({
             getUser() {
-                /*var user = Meteor.users.findOne({ 'profile.access_token': $scope.access_token });
+                var user = Meteor.users.findOne({ 'profile.access_token': $scope.access_token });
 
                 // console.log(user);
                 // console.log($scope.access_token);
                 if (user) {
 
-                  $scope.loading = true;
+                    $scope.loading = true;
 
-                  // console.log(user.profile.user_info.email);
-                  // console.log(user.profile.user_info.account_id);
-                  $scope.login(user.profile.user_info.email, user.profile.user_info.account_id);
-                }*/
+                    // console.log(user.profile.user_info.email);
+                    // console.log(user.profile.user_info.account_id);
+                    $scope.login(user.profile.user_info.email, user.profile.user_info.account_id);
+                }
             }
         });
 
