@@ -27,5 +27,4 @@ alanning:roles
 ostrio:files
 http@1.4.0
 email@1.2.3
-standard-minifier-js@2.3.1
 force-ssl@1.1.0
