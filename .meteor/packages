@@ -28,3 +28,4 @@ ostrio:files
 http@1.4.0
 email@1.2.3
 force-ssl@1.1.0
+standard-minifier-js
